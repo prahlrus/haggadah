@@ -1,0 +1,27 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[twoside,openany,12pt]{book}
+
+\input{dimensions}
+
+%Use a booklet
+\usepackage[print,1to1]{booklet}
+\pagespersignature{28}
+
+\source{\magstep0}{\paperwidth}{\paperheight}
+\target{\magstep0}{11in}{8.5in}
+
+\setpdftargetpages
+
+% General Package & Macro Loading
+\input{packages}
+
+\begin{document}
+
+\input{sections/1_early_simanim}
+\input{sections/2_maggid}
+\input{sections/3_middle_simanim}
+\input{sections/4_benching}
+\input{sections/5_final_simanim}
+
+\end{document}

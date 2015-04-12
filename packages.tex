@@ -1,0 +1,30 @@
+\usepackage{framed}
+
+% Font & Hebrew Stuff
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage{bidi}
+\setdefaultlanguage{hebrew}
+\setotherlanguage{english}
+\newfontfamily\hebrewfont[Script=Hebrew]{Mekorot-Vilna}
+\newfontfamily\englishfont[Mapping=tex-text, Scale=0.7]{Times New Roman}
+
+\newfontface\instructionfont[Scale=0.8]{Mekorot-Rashi}
+\newfontface\pasukfont[Scale=0.8]{Shlomo Stam}
+\newfontface\glossfont[Scale=0.8]{Shlomo semiStam}
+
+\newcommand{\HRule}{\noindent\rule{\linewidth}{0.5mm}}
+
+% Commands used in the text
+\newcommand{\pasuk}[1]{\unskip{\pasukfont #1}}
+\newcommand{\glossed}[1]{\unskip{\glossfont #1}\unskip~$-$\nobreak}
+
+\newcommand{\bibverse}[1]{{\bfseries #1}}
+\newcommand{\engloss}[1]{`\bibverse{#1}'\unskip~$-$\nobreak}
+
+\newenvironment{myquote}{\list{}{\leftmargin=0.25in\rightmargin=0.25in}\item[]}{\endlist}
+
+\newcommand{\siman}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
+\newcommand{\instruction}[2]{\noindent {\instructionfont #1} \textenglish{\LR{\\ \noindent \itshape #2}}}
+\newcommand{\hebstruction}[1]{\noindent {\instructionfont #1}:\unskip}
+\newcommand{\engstruction}[1]{{\itshape #1}}
