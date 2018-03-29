@@ -9,12 +9,12 @@
 \usepackage{bidi}
 \setdefaultlanguage{hebrew}
 \setotherlanguage{english}
-\newfontfamily\hebrewfont[Script=Hebrew]{Mekorot-Vilna}
-\newfontfamily\englishfont[Mapping=tex-text, Scale=0.7]{Palatino}
+\newfontfamily\hebrewfont[Script=Hebrew, Scale=1.4]{Frank Ruehl CLM}
+\newfontfamily\englishfont[Mapping=tex-text, Scale=1]{Palatino}
 
-\newfontface\instructionfont[Scale=0.8]{Mekorot-Rashi}
-\newfontface\pasukfont[Scale=0.8]{Shlomo Stam}
-\newfontface\glossfont[Scale=0.8]{Shlomo semiStam}
+\newfontface\instructionfont[Scale=1.2]{Mekorot-Rashi}
+\newfontface\pasukfont{Shlomo Stam}
+\newfontface\glossfont{Shlomo semiStam}
 
 \newcommand{\HRule}{\noindent\rule{\linewidth}{0.5mm}}
 
@@ -26,6 +26,8 @@
 \newcommand{\engloss}[1]{`\bibverse{#1}'\unskip~$-$\nobreak}
 
 \newenvironment{myquote}{\list{}{\leftmargin=0.25in\rightmargin=0.25in}\item[]}{\endlist}
+
+\newcommand{\makkah}[2]{{\Large \bfseries \begin{minipage}{0.48\linewidth}\begin{english}\vspace{0pt}#2\end{english}\end{minipage}\hspace{0.02\linewidth}\begin{minipage}{0.48\linewidth}\vspace{0pt}#1\end{minipage}}\vspace{0.5em}}
 
 \newcommand{\siman}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
 \newcommand{\instruction}[2]{\textenglish{\LR{\noindent \itshape #2 \hfill}}}
